@@ -6,12 +6,10 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Montserrat, sans-serif
-}
+body { font-family: Montserrat, sans-serif }
 
 #myCanvas {
-  background: #eee;
+  background: #e4e8e9;
   display: block;
   position: absolute;
   top: 50%;
