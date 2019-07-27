@@ -52,32 +52,44 @@ const draw = () => {
   // Drawing the paddle
   drawPaddle()
   // Collision detection of the ball
+  // -------------------------------
   // If the sum of circleX and differential x is greater than the difference between the canvas width and the radius of the circle
   // Change the direction of x
   // Similarly if the sum of circleY and differential y is greater than the difference between the canvas height and the radius of the circle
   // Change the direction of y
   circleDx = (circleX + circleDx  > canvas.width - 10 || circleX + circleDx < 10) ? -circleDx : circleDx
   circleDy = (circleY + circleDy  > canvas.height - 10 || circleY + circleDy < 10) ? -circleDy : circleDy
-  if (rightPressed && paddleX < canvas.width - paddleWidth) paddleX += 7
+  // Paddle direction change
+  // -----------------------
+  // If rightPressed is true and if the paddleX is less than the difference between canvas' width and paddleWidth (right side)
+  // that difference is due to the calculation of paddle width, else it will disappear beyond the wall
+  // then change the direction to positive 7 units
+  if (rightPressed && paddleX < canvas.width) paddleX += 7
+  // Similarly if leftPressed is true and if the paddleX is greater than 0 (left side)
+  // Change the direction to negative 7 units
   else if (leftPressed && paddleX > 0) paddleX -= 7
 }
 
 // Runs the function for every 10 ms
 setInterval(draw, 10)
 
+// If the key is pressed down
+// then swap the variables of right and left pressed to true
 const keyDownHandler = e => {
   if (e.keyCode == 39) rightPressed = true
   else if (e.keyCode === 37) leftPressed = true
 }
 
+// If the key is pressed up
+// then swap back the variables of right and left pressed to false
 const keyUpHandler = e => {
   if (e.keyCode == 39) rightPressed = false
   else if (e.keyCode === 37) leftPressed = false
 }
 
-// All listeners
-document.addEventListener('keydown', keyDownHandler, false)
-document.addEventListener('keyup', keyUpHandler, false)
+// All listeners (keypress, keydown)
+document.addEventListener('keydown', keyDownHandler)
+document.addEventListener('keyup', keyUpHandler)
 
 // ----------------------------------------------------------------------------------
 // Basics of canvas shape drawings
