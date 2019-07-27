@@ -1,0 +1,24 @@
+{
+  "name": "break-the-brick",
+  "version": "1.0.0",
+  "description": "A simple game built using HTML CSS and JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunguru98/PSG-HTML-JS-Workshop.git"
+  },
+  "keywords": [
+    "Break",
+    "the",
+    "brick"
+  ],
+  "author": "Sundeep Charan Ramkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunguru98/PSG-HTML-JS-Workshop/issues"
+  },
+  "homepage": "https://github.com/sunguru98/PSG-HTML-JS-Workshop#readme"
+}

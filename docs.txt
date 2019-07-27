@@ -36,12 +36,22 @@
     -> Abstraction
 
 8. GAME CREATION PROCESS :-
-    -> Create the game
-        -> Understand the game
+    . Create the game
+       ---------------
+        * Understand the game
             -> Observe It
             -> Play it
-        -> Create Versions
+        * Create Versions
             -> Create design
-            -> Create program, debug and reflect them
+                # Understand Versions
+                    (.) Observe version
+                    (.) Play version
+                    (.) Create version description
+                # Create Algorithm
+            -> Create program
+                # Observe version
+                # Play version
+                # Create version description
+            -> Debug and reflect them
 
 
